@@ -1,0 +1,41 @@
+.main_title{
+    font-size: 0.48rem;
+    font-family: Jxiaobiaosong;
+    color: #4a4a4a;
+    line-height: 42px;
+    margin: 0 18px;
+    padding-top: 5px;
+    font-weight: 600;
+    text-align: center;
+}
+.main_content{
+    font-size: 0.35rem;
+    font-family: PingFangSC-Light;
+    margin: 0.8rem 0.48rem 0;
+    color: #666;
+    line-height: 0.6rem;
+}
+.suggest{
+    font-size: 0.34666667rem;
+    font-family: PingFangSC-Light;
+    color: #4a4a4a;
+    margin: 0.8rem 0.48rem 0;
+}
+.suggest .title{
+    font-weight: bolder;
+    margin-bottom: 0.2rem;
+}
+.career_change_age{
+    background-color: #E7E7E7;
+    height: 1.5rem;
+    border-left: 5px solid #003377;
+    font-size: 0.34666667rem;
+    font-family: PingFangSC-Light;
+    color: #4a4a4a;
+    margin: 0.8rem 0.2rem 0;
+    padding: 0.3rem;
+}
+.career_change_age .title{
+    font-size: 0.45rem;
+    margin-bottom: 0.2rem;
+}

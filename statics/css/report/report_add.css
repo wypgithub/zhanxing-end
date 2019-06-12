@@ -1,0 +1,94 @@
+.add-reportlist[data-v-5cd2d555] {
+    background: #ECECEC;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+.add-reportlist__title[data-v-5cd2d555] {
+    font-size: 0.8rem;
+    color: #5f5f5f;
+    line-height: 1.12rem;
+    margin: 0.4rem 0.42666667rem 1.86666667rem 0;
+    padding-left: 0.42666667rem;
+    text-align: left;
+    letter-spacing:4.3px
+}
+.add-reportlist__list[data-v-5cd2d555] {
+    width: 8.17333333rem;
+    height: 0.74666667rem;
+    padding: 0.42666667rem 0.52rem 0.4rem 0.37333333rem;
+    -webkit-box-shadow: 0 0.05333333rem 0.26666667rem 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 0.05333333rem 0.26666667rem 0 rgba(0, 0, 0, 0.12);
+    background: #fff;
+    margin: 0 auto 0.32rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.add-reportlist__list-name[data-v-5cd2d555] {
+    font-size: 0.37333333rem;
+    line-height: 0.74666667rem;
+    text-align: left;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin: 0 0.50666667rem;
+}
+.report-click[data-v-5cd2d555] {
+    width: 4rem;
+    margin: 0 auto;
+}
+.report-click-picblack[data-v-5cd2d555] {
+    width: 1.46666667rem;
+    height: 1.46666667rem;
+    border-radius: 100%;
+    background: #395199;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.report-click-picblack img[data-v-5cd2d555] {
+    width: 0.66666667rem;
+    height: 0.66666667rem;
+}
+.report-click-pic img[data-v-5cd2d555] {
+    width: 1.33333333rem;
+    height: 1.33333333rem;
+}
+.report-click-money[data-v-5cd2d555] {
+    font-size: 14px;
+    color: #8e8e93;
+    text-align: center;
+    margin-top: 8px;
+}
+input{
+    margin-left: 0.5rem;
+    height: 1rem;
+    width: 80%;
+    border: none;
+    font-size: 0.37333333rem;
+    line-height: 0.74666667rem;
+}
+.web-font {
+    font-family: "webfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.report_title_after{
+    color: #395a99;
+}

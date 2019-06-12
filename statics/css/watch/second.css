@@ -1,0 +1,118 @@
+.customi-progress[data-v-23b4ffd4] {
+    width: 9.33333333rem;
+    height: 2.66666667rem;
+    background: #fff;
+    border-radius: 0.10666667rem;
+    margin: 0.4rem auto;
+    position: relative;
+    -webkit-box-shadow: 0 0.16rem 0.10666667rem 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 0.16rem 0.10666667rem 0 rgba(0, 0, 0, 0.12);
+}
+.customi-progress__but[data-v-23b4ffd4] {
+    position: absolute;
+    top: 0.77333333rem;
+    left: 15%;
+    width: 70%;
+    height: 0.04rem;
+    background: #D9D9D9;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.customi-progress__but-item[data-v-23b4ffd4] {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+.customi-progress__but-item--action[data-v-23b4ffd4] {
+    background: #5F5F5F;
+}
+.customi-progress__list[data-v-23b4ffd4] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 0.37333333rem;
+    position: absolute;
+    width: 100%;
+}
+.customi-progress__list-item[data-v-23b4ffd4] {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    line-height: 1.06666667rem;
+    text-align: center;
+}
+.customi-progress__list-item--dd[data-v-23b4ffd4] {
+    border-radius: 100%;
+    background: #5F5F5F;
+    height: 0.16rem;
+    width: 0.16rem;
+    display: inline-block;
+    line-height: 0.8rem;
+    margin-top: 0.6rem;
+    border: 0.13333333rem solid #fff;
+}
+.customi-progress__list-item--dd img[data-v-23b4ffd4] {
+    width: 0.6rem;
+}
+.customi-progress__list-item--dimg[data-v-23b4ffd4] {
+    border-radius: 100%;
+    width: 0.6rem;
+    display: inline-block;
+    line-height: 0.8rem;
+    margin-top: 0.34666667rem;
+    border: 0.13333333rem solid #fff;
+    border-bottom: 0rem;
+    background: #fff;
+}
+.customi-progress__list-item--dimg img[data-v-23b4ffd4] {
+    width: 0.6rem;
+}
+.customization-topaypage[data-v-4a839274] {
+    background: #e7e7e7;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.customization-topaypage__text[data-v-4a839274] {
+    background: #fff;
+    margin: 0.50666667rem auto;
+    min-height: 5.73333333rem;
+    width: 8.4rem;
+    text-align: center;
+    padding: 0.26666667rem 0.4rem;
+    border-radius: 0.10666667rem;
+    -webkit-box-shadow: 0 0.02666667rem 0.06666667rem 0.04rem rgba(0, 0, 0, 0.13);
+    box-shadow: 0 0.02666667rem 0.06666667rem 0.04rem rgba(0, 0, 0, 0.13);
+}
+.customization-topaypage__text .text[data-v-4a839274] {
+    margin-top: 1.86666667rem;
+    font-size: 0.42666667rem;
+    color: #4A4A4A;
+}
+.customization-topaypage__text .nexttext[data-v-4a839274] {
+    margin-top: 0.13333333rem;
+    font-size: 0.42666667rem;
+    margin-bottom: 0.53333333rem;
+}
+.nexttext-imgbox img[data-v-4a839274] {
+    width: 10.66666667rem;
+    position: absolute;
+    top: -6.66666667rem;
+    left: -2.66666667rem;
+}
+.customization-topaypage__text .next[data-v-4a839274] {
+    font-size: 0.37333333rem;
+}
+.customization-topaypage__sub[data-v-4a839274] {
+    width: 4rem;
+    height: 1.17333333rem;
+    background: #395a99;
+    font-size: 0.37333333rem;
+    line-height: 1.17333333rem;
+    color: #fff;
+    text-align: center;
+    border-radius: 0.93333333rem;
+    margin: 0.26666667rem auto;
+}

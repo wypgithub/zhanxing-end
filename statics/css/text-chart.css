@@ -1,0 +1,80 @@
+.gry{
+	display:none;
+}
+
+.txt{
+	display:inline;	
+}
+
+.xp_symbol, 
+.xp_symbol_planet,
+.xp_symbol_planet2{
+    display: inline-block;
+    font-family: 'web_ixingpan_cn';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    font-size:20px;    
+    margin: 0px;
+    padding: 0px;
+    cursor:pointer;
+}
+
+.xp_symbol_house{
+	font-size:20px !important;
+}
+
+.xp_symbol_house:hover{
+	font-size:26px !important;
+}
+
+.xp_symbol_planet:hover,
+.xp_symbol_planet2:hover{
+	font-size:18px;    	
+}
+
+.xp_symbol_sign{   
+    font-size:24px;  
+}
+
+.xp_symbol_sign:hover{
+	font-size:26px;    	
+}
+
+@media screen and (min-width:640px) {
+    .xp_symbol, 
+    .xp_symbol_planet,
+    .xp_symbol_planet2{  
+        font-size:14px;  
+    }
+
+    .xp_symbol_house{
+        font-size:18px !important;
+    }
+
+    .xp_symbol_house:hover{
+        font-size:24px !important;
+    }   
+
+    .xp_symbol_sign{   
+        font-size:22px;  
+    }
+}
+
+.xp_symbol_ruled{   
+    font-size:14px;  
+}
+
+.xp_symbol_ruled:hover{   
+    font-size:16px;  
+}
+
+#firdariabig .xp_symbol{
+	font-size:14px; 
+	stroke-width:1;
+}
+
+#firdariasmall .xp_symbol{
+	font-size:11px; 
+	stroke-width:1;
+}

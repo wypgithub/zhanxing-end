@@ -1,0 +1,91 @@
+.me[data-v-67611440] {
+    height: 100vh;
+    background: #F6F6F6;
+    overflow: auto;
+}
+.me-list[data-v-67611440] {
+    margin-top: 0.26666667rem;
+    padding: 0.13333333rem 0 0.06666667rem 0.66666667rem;
+    background: #fff;
+}
+.me-list__item[data-v-67611440] {
+    border-bottom: 0.01333333rem solid rgba(66, 82, 105, 0.1);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 0.37333333rem;
+}
+.me-list__item[data-v-67611440]:last-child {
+    border-bottom: none;
+}
+.me-list__item-img[data-v-67611440] {
+    height: 0.46666667rem;
+    width: 0.46666667rem;
+    margin-top: 0.29333333rem;
+    padding-right: 0.98666667rem;
+}
+.me-list__item-img img[data-v-67611440] {
+    height: 100%;
+    width: 100%;
+}
+.me-list__item-imgtop[data-v-67611440] {
+    height: 0.53333333rem;
+    width: 0.53333333rem;
+    margin-top: 0.26666667rem;
+    padding-right: 0.93333333rem;
+}
+.me-list__item-imgtop img[data-v-67611440] {
+    height: 100%;
+    width: 100%;
+}
+.me-list__item-test[data-v-67611440] {
+    line-height: 1.17333333rem;
+    color: #000;
+    height: 1.17333333rem;
+}
+.me-list__customer[data-v-67611440] {
+    height: 1.33333333rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.me-list__customer-img[data-v-67611440] {
+    width: 0.8rem;
+    margin: 0.26666667rem 0.13333333rem;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.me-list__customer-img img[data-v-67611440] {
+    width: 100%;
+}
+.me-list__customer-text[data-v-67611440] {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    font-size: 0.42666667rem;
+    margin-left: 0.26666667rem;
+    line-height: 0.66666667rem;
+    text-align: left;
+}
+.me-list__customer-text--bottom[data-v-67611440] {
+    font-size: 0.37333333rem;
+    font-weight: 300;
+}
+.me-list__customer-sub[data-v-67611440] {
+    font-size: 0.37333333rem;
+    border: 0.02666667rem solid #79b75d;
+    color: #79b75d;
+    text-align: center;
+    line-height: 0.66666667rem;
+    border-radius: 0.13333333rem;
+    height: 0.66666667rem;
+    width: 2rem;
+    margin: 0.33333333rem;
+}
+.me-outlogin[data-v-67611440] {
+    text-align: center;
+    line-height: 1.33333333rem;
+    font-size: 14px;
+    background: #fff;
+    margin-top: 0.66666667rem;
+}

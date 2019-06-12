@@ -1,0 +1,24 @@
+
+@font-face {
+    font-family: "webfont";
+    src: url('../../fonts/webfont/webfont.eot'); /* IE9 */
+    src: url('../../fonts/webfont/webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../../fonts/webfont/webfont.woff') format('woff'), /* chrome、firefox */
+    url('../../fonts/webfont/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../../fonts/webfont/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+}
+*{
+    font-family: "webfont" ;
+}
+.color_gradien{
+    background: -webkit-linear-gradient(#5dbdb6, #424480,#3b5a99); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#5dbdb6, #424480,#3b5a99); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#5dbdb6, #424480,#3b5a99); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#5dbdb6, #424480,#3b5a99); /* 标准的语法 */
+}
+.color_gradien_lr{
+    background: -webkit-linear-gradient(left, #3b5a99, #40518d); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #3b5a99, #40518d); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #3b5a99, #40518d); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #3b5a99, #40518d); /* 标准的语法 */
+}

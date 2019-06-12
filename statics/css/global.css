@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+caption, tbody, tfoot, thead, tr, th, td {margin: 0;	padding: 0;	border: 0; outline: 0;font-family:'Microsoft Yahei', SimSun, tahoma, arial, sans-serif}
+button, input, textarea{margin: 0; padding: 0;} /* form elements 表单元素 */
+body,button,input,select,textarea{font: 14px/1.5 inherit}/*设置的字体，行高*/
+h1,h2,h3,h4,h5,h6,th{font-weight:normal;}/*重置标题*/
+address,cite,dfn,em,var{font-style:normal;}/* 将斜体扶正 */
+code, kbd, pre, samp { font-family:courier, monospace; } /* 统一等宽字体 */
+ul,ol{list-style:none;}/* 重置列表元素 */
+button,input[type="submit"],input[type="button"]{cursor: pointer;}
+input[type="radio"],input[type="checkbox"],input[type="submit"],input[type="reset"] { vertical-align: middle; cursor: pointer; }
+/*去掉苹果默认按钮样式*/
+input[type="button"], input[type="submit"], input[type="reset"] ,button{
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance: none;
+}
+/*去除Chrome等浏览器文本框默认发光边框*/
+input:focus, textarea:focus {
+    outline: none;
+}
+/*去掉高光样式：*/
+input:focus{
+    /*苹果input点击时，去掉黑色半透明的背景色，尝试不知道好用不*/
+    -webkit-box-shadow:0 0 15px #ffffff;
+    -moz-box-shadow: 0 0 15px #ffffff;
+    box-shadow:0 0 15px #ffffff;
+}
+/*表单元素在手机中点击时会出现边框，取消边框的写法如下：
+*webkit是苹果浏览器引擎，tap点击，highlight背景高亮，color颜色，颜色用数值调节。
+*CSS3 修改和去除移动端点击事件出现的背景框
+*/
+input, textarea, button, a{
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    /*-webkit-user-modify:read-write-plaintext-only;*/
+}
+
+/*chrome表单自动填充导致input文本框背景变成偏黄色问题解决*/
+input:-webkit-autofill { -webkit-box-shadow: 0 0 0 1000px white inset; }
+/** 重置文本格式元素 **/
+a{text-decoration:none;}
+a:hover{text-decoration:none;}
+:focus {outline: 0;}
+sup{vertical-align:text-top;}/* 重置，减少对行高的影响 */
+sub{vertical-align:text-bottom;}
+/** 重置表单元素 **/
+fieldset, img { border: 0; } /* img 搭车：让链接里的 img 无边框 */
+button, input, select, textarea {background:transparent; font-size: 100%; outline: 0;} /* 使得表单元素在 ie 下能继承字体大小 */
+/* 注：optgroup 无法扶正 */
+table{border-collapse:collapse;border-spacing:0;}
+/* 重置 HTML5 元素 */
+article, aside, details, figcaption, figure, footer,header, hgroup, menu, nav, section,summary, time, mark, audio, video {display: block; margin: 0; padding: 0;}
+
+/*浮动*/
+.pull_left{ float:left;}
+.pull_right{ float:right;}
+.f_fl {float: left; display: inline;}
+.f_fr {float: right; display: inline;}
+.clearfix {*zoom: 1;}
+.clearfix:before,.clearfix:after {display: table; content: ""; height:0; clear:both; visibility: hidden;}
+.clear{ clear:both; *zoom:1;}
+
+*{ box-sizing:border-box;font-size:0.0375rem;}

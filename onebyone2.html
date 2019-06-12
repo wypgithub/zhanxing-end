@@ -1,0 +1,124 @@
+
+
+<html lang="en" xmlns:wb="http://open.weibo.com/wb" data-dpr="1" style="font-size: 36px;">
+<head>
+    <title>大师看盘-支付</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="statics/css/watch/second.css">
+    <script src="statics/js/jquery-1.11.3.min.js"></script>
+    <script src="statics/layer/layer.js"></script>
+</head>
+<body iclicash_checked="true" style="font-size: 12px;">
+<div id="app">
+    <div data-v-4a839274="" class="customization-topaypage">
+        <div data-v-23b4ffd4="" data-v-4a839274="" class="customi-progress">
+            <div data-v-23b4ffd4="" class="customi-progress__but">
+                <div data-v-23b4ffd4="" class="customi-progress__but-item customi-progress__but-item--action"></div>
+                <div data-v-23b4ffd4="" class="customi-progress__but-item customi-progress__but-item--action"></div>
+            </div>
+            <div data-v-23b4ffd4="" class="customi-progress__list">
+                <div data-v-23b4ffd4="" class="customi-progress__list-item">
+                    <div data-v-23b4ffd4="" class="customi-progress__list-item--dimg">
+                        <img data-v-23b4ffd4="" src="statics/images/svg/true.svg" mode="widthFix" />
+                    </div>
+                    <p data-v-23b4ffd4="" class="customi-progress__list-item--text">选择服务</p>
+                </div>
+                <div data-v-23b4ffd4="" class="customi-progress__list-item">
+                    <div data-v-23b4ffd4="" class="customi-progress__list-item--dimg">
+                        <img data-v-23b4ffd4="" src="statics/images/action.png" mode="widthFix" />
+                    </div>
+                    <p data-v-23b4ffd4="" class="customi-progress__list-item--text">付款</p>
+                </div>
+                <div data-v-23b4ffd4="" class="customi-progress__list-item">
+                    <div data-v-23b4ffd4="" class="customi-progress__list-item--dd"></div>
+                    <p data-v-23b4ffd4="" class="customi-progress__list-item--text">开始咨询</p>
+                </div>
+            </div>
+        </div>
+        <div data-v-4a839274="" class="customization-topaypage__text">
+            <!---->
+            <div data-v-4a839274="" class="text">
+                您将购买 &yen;<b style="color: red;margin: 0px 5px">99</b>元“人工看盘”，请确认！
+            </div>
+        </div>
+        <div data-v-4a839274="" class="customization-topaypage__sub" id="payBuy">
+            去付款
+        </div>
+    </div>
+</div>
+<script src="statics/js/style.js"></script>
+<script type="text/javascript">
+
+    var unifiedOrderParam;
+    var layerIndex1;
+    var layerIndex2;
+    function payOrder() {
+        layerIndex1 = layer.load(2);
+        $.ajax({
+            type: "GET",
+            url: "/pay/wx_jsapi.php?pid=3&xpid=0",
+            dataType: "json",
+            success: function (data) {
+                if (data.result == 1) {
+                    unifiedOrderParam = JSON.parse(data["param"]);
+                    layer.close(layerIndex1)
+                    callpay();
+                }
+            },
+            error: function () {
+                layer.close(layerIndex1)
+                alert("下单失败，请关闭后重试。");
+            },
+            complete: function () {
+                layer.close(layerIndex1)
+            }
+        });
+    }
+
+    //调用微信JS api 支付
+    function jsApiCall() {
+        WeixinJSBridge.invoke(
+            'getBrandWCPayRequest',
+            unifiedOrderParam,
+            function (res) {
+                WeixinJSBridge.log(res.err_msg);
+                if (res.err_msg == 'get_brand_wcpay_request:ok') {
+                    layerIndex2 = layer.msg('正在加载...', {
+                        icon: 16
+                        ,shade: 0.01
+                    });
+                    setTimeout(function(){
+                        layer.closeAll('loading');
+                        location = 'onebyone3.php';
+                    }, 2000);
+                } else {
+                    alert('支付失败');//+ res.err_code + res.err_desc + res.err_msg);
+                }
+            }
+        );
+    }
+
+    function callpay() {
+        if (typeof WeixinJSBridge == "undefined") {
+            if (document.addEventListener) {
+                document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+            } else if (document.attachEvent) {
+                document.attachEvent('WeixinJSBridgeReady', jsApiCall);
+                document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+            }
+        } else {
+            jsApiCall();
+        }
+    }
+
+    // 解锁报告
+    $('#payBuy').click(function () {
+        //alert('xx');
+        payOrder();
+        //location.href = 'Product/'
+    })
+</script>
+</body>
+</html>

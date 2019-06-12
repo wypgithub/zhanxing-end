@@ -1,0 +1,44 @@
+.add-reportlist[data-v-5cd2d555] {
+    background: #ECECEC;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+.add-reportlist__title[data-v-5cd2d555] {
+    font-size: 0.8rem;
+    color: #4A4A4A;
+    line-height: 1.12rem;
+    margin: 0.4rem 0.42666667rem 1.86666667rem 0;
+    padding-left: 0.42666667rem;
+    text-align: left;
+}
+.add-reportlist__list-name[data-v-5cd2d555] {
+    font-size: 0.37333333rem;
+    line-height: 0.74666667rem;
+    text-align: left;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin: 0 0.50666667rem;
+}
+.report-click-picblack img[data-v-5cd2d555] {
+    width: 0.66666667rem;
+    height: 0.66666667rem;
+}
+.report-click-pic img[data-v-5cd2d555] {
+    width: 1.33333333rem;
+    height: 1.33333333rem;
+}
+.mui-table-view-cell{
+    height: 1.5rem;
+    line-height: 1rem;
+}
+.mui-slider-handle{
+    text-align: left;
+    padding-left: 20px;
+}
+.mui-slider-handle a{
+    color: #4a4a4a;
+    font-size: 0.38rem;
+}

@@ -1,0 +1,257 @@
+
+
+<html lang="en" xmlns:wb="http://open.weibo.com/wb" data-dpr="1" style="font-size: 37.5px;">
+<head>
+    <title>情感运势详解</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="statics/css/report/report_unlock.css">
+    <style>
+        .title{
+            font-weight: bold;
+            margin: 10px 0px;
+        }
+    </style>
+
+</head>
+<body iclicash_checked="true" style="font-size: 12px;">
+
+<div id="app">
+    <div data-v-1f8af3dd="" class="counter">
+        <div data-v-1f8af3dd="" class="matter">
+            <div data-v-1f8af3dd="" class="link">
+                情感运势<span>详解</span>
+                <span data-v-1f8af3dd=""> 102 人已购买 </span>
+            </div>
+            <div data-v-1f8af3dd="" class="demo">
+                你的情感运势            </div>
+            <div data-v-1f8af3dd="" class="single__content">
+                <div data-v-1f8af3dd="" class="single__content-title">
+                    报告包含内容
+                </div>
+                情感如何            </div>
+                            <div data-v-1f8af3dd="" class="single__money">
+                    <div data-v-1f8af3dd="" class="single__money-item">
+                        <div data-v-1f8af3dd="" class="single__money-left">
+                            需支付
+                        </div>
+                        <div data-v-1f8af3dd="" class="single__money-item-now">
+                            &yen;0.02                        </div>
+                    </div>
+                    <div data-v-1f8af3dd="" class="single__money-item">
+                        <div data-v-1f8af3dd="" class="single__money-left">
+                            原价
+                        </div>
+                        <div data-v-1f8af3dd="" class="single__money-item-old">
+                            &yen; 29.9                        </div>
+                    </div>
+                    <div data-v-1f8af3dd="" class="single__money-item">
+                        <div data-v-1f8af3dd="" class="single__money-left">
+                            优惠金额
+                        </div>
+                        <div data-v-1f8af3dd="" class="single__money-item-jian">
+                            -&yen;29.88                        </div>
+                    </div>
+                </div>
+                <div data-v-1f8af3dd="" class="pages" id="payBuy">
+                    解锁情感运势报告
+                </div>
+
+                <script src="statics/js/jquery-1.11.3.min.js"></script>
+                <script src="statics/layer/layer.js"></script>
+                <script type="text/javascript">
+
+                    var unifiedOrderParam;
+                    var layerIndex1;
+                    var layerIndex2;
+                    function payOrder() {
+                        layerIndex1 = layer.load(2);
+                        $.ajax({
+                            type: "GET",
+                            url: "/pay/wx_jsapi.php?pid=2&xpid=41",
+                            dataType: "json",
+                            success: function (data) {
+                                if (data.result == 1) {
+                                    unifiedOrderParam = JSON.parse(data["param"]);
+                                    layer.close(layerIndex1)
+                                    callpay();
+                                }else{
+                                    layer.msg(data.errmsg);
+                                }
+                            },
+                            error: function () {
+                                layer.close(layerIndex1)
+                                alert("下单失败，请关闭后重试。");
+                            },
+                            complete: function () {
+                                layer.close(layerIndex1)
+                            }
+                        });
+                    }
+
+                    //调用微信JS api 支付
+                    function jsApiCall() {
+                        WeixinJSBridge.invoke(
+                            'getBrandWCPayRequest',
+                            unifiedOrderParam,
+                            function (res) {
+                                WeixinJSBridge.log(res.err_msg);
+                                if (res.err_msg == 'get_brand_wcpay_request:ok') {
+                                    layerIndex2 = layer.msg('重新加载中...', {
+                                        icon: 16
+                                        ,shade: 0.01
+                                    });
+                                    setTimeout(function(){
+                                        layer.closeAll('loading');
+                                        location.reload();
+                                    }, 2000);
+                                } else {
+                                    alert('支付失败');//+ res.err_code + res.err_desc + res.err_msg);
+                                }
+                            }
+                        );
+                    }
+
+                    function callpay() {
+                        if (typeof WeixinJSBridge == "undefined") {
+                            if (document.addEventListener) {
+                                document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+                            } else if (document.attachEvent) {
+                                document.attachEvent('WeixinJSBridgeReady', jsApiCall);
+                                document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+                            }
+                        } else {
+                            jsApiCall();
+                        }
+                    }
+                </script>
+            
+            <div data-v-1f8af3dd="" class="single__text">
+                <div data-v-1f8af3dd="" class="single__text-title"></div>
+                <div data-v-1f8af3dd=""></div>
+            </div>
+            <div data-v-1f8af3dd="" class="feedback">
+                
+<div data-v-1f8af3dd="" class="title">
+                        <p data-v-1f8af3dd="">评论反馈（3条）</p>
+                    </div>
+                    <div data-v-1f8af3dd="" class="content">
+                        <div data-v-1f8af3dd="" class="list">
+                            <div data-v-1f8af3dd="" class="top">
+                                <div data-v-1f8af3dd="" class="pic">
+                                    <img data-v-1f8af3dd="" src="http://face-plus.oss-cn-hangzhou.aliyuncs.com/UI_IMG/lanqing.jpeg" alt="" />
+                                </div>
+                                <div data-v-1f8af3dd="" class="name">
+                                    <p data-v-1f8af3dd="">人生若只如初见</p>
+                                </div>
+                                <div data-v-1f8af3dd="" class="score">
+                                    <div data-v-1f8af3dd="" class="start">
+                                        <img data-v-1f8af3dd="" src="statics/images/svg/star.svg" />
+                                    </div>
+                                    <div data-v-1f8af3dd="" class="start">
+                                        <img data-v-1f8af3dd="" src="statics/images/svg/star.svg" />
+                                    </div>
+                                    <div data-v-1f8af3dd="" class="start">
+                                        <img data-v-1f8af3dd="" src="statics/images/svg/star.svg" />
+                                    </div>
+                                    <div data-v-1f8af3dd="" class="start">
+                                        <img data-v-1f8af3dd="" src="statics/images/svg/star.svg" />
+                                    </div>
+                                    <div data-v-1f8af3dd="" class="start">
+                                        <img data-v-1f8af3dd="" src="statics/images/svg/star.svg" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-v-1f8af3dd="" class="bottom">
+                                <p data-v-1f8af3dd="">第一次接触算命，以前不信现在信了，看来祖先留下的东西是有道理的</p>
+                                <span data-v-1f8af3dd="">购买：事业运程报告 &yen;19.90</span>
+                            </div>
+                        </div>
+                        <div data-v-1f8af3dd="" class="list">
+                            <div data-v-1f8af3dd="" class="top">
+                                <div data-v-1f8af3dd="" class="pic">
+                                    <img data-v-1f8af3dd="" src="http://face-plus.oss-cn-hangzhou.aliyuncs.com/UI_IMG/an.jpeg " alt="" />
+                                </div>
+                                <div data-v-1f8af3dd="" class="name">
+                                    <p data-v-1f8af3dd="">Аη.</p>
+                                </div>
+                                <div data-v-1f8af3dd="" class="score">
+                                    <div data-v-1f8af3dd="" class="start">
+                                        <img data-v-1f8af3dd="" src="statics/images/svg/star.svg" />
+                                    </div>
+                                    <div data-v-1f8af3dd="" class="start">
+                                        <img data-v-1f8af3dd="" src="statics/images/svg/star.svg" />
+                                    </div>
+                                    <div data-v-1f8af3dd="" class="start">
+                                        <img data-v-1f8af3dd="" src="statics/images/svg/star.svg" />
+                                    </div>
+                                    <div data-v-1f8af3dd="" class="start">
+                                        <img data-v-1f8af3dd="" src="statics/images/svg/star.svg" />
+                                    </div>
+                                    <div data-v-1f8af3dd="" class="start">
+                                        <img data-v-1f8af3dd="" src="statics/images/svg/star.svg" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-v-1f8af3dd="" class="bottom">
+                                <p data-v-1f8af3dd="">因为没有遇到合适的对象家人十分着急，机缘巧合来这里买了情感测试，发现真的好神奇，把我的个人性格目前的状态说的很符合，还挺有趣的！</p>
+                                <span data-v-1f8af3dd="">购买：事业运程报告 &yen;39.90</span>
+                            </div>
+                        </div>
+                        <div data-v-1f8af3dd="" class="list">
+                            <div data-v-1f8af3dd="" class="top">
+                                <div data-v-1f8af3dd="" class="pic">
+                                    <img data-v-1f8af3dd="" src="http://face-plus.oss-cn-hangzhou.aliyuncs.com/UI_IMG/houmiao.jpeg" alt="" />
+                                </div>
+                                <div data-v-1f8af3dd="" class="name">
+                                    <p data-v-1f8af3dd="">猴喵喵</p>
+                                </div>
+                                <div data-v-1f8af3dd="" class="score">
+                                    <div data-v-1f8af3dd="" class="start">
+                                        <img data-v-1f8af3dd="" src="statics/images/svg/star.svg" />
+                                    </div>
+                                    <div data-v-1f8af3dd="" class="start">
+                                        <img data-v-1f8af3dd="" src="statics/images/svg/star.svg" />
+                                    </div>
+                                    <div data-v-1f8af3dd="" class="start">
+                                        <img data-v-1f8af3dd="" src="statics/images/svg/star.svg" />
+                                    </div>
+                                    <div data-v-1f8af3dd="" class="start">
+                                        <img data-v-1f8af3dd="" src="statics/images/svg/star.svg" />
+                                    </div>
+                                    <div data-v-1f8af3dd="" class="start">
+                                        <img data-v-1f8af3dd="" src="statics/images/svg/star.svg" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-v-1f8af3dd="" class="bottom">
+                                <p data-v-1f8af3dd="">我的感情就是一段孽缘，分分合合，痛彻心扉，这里分析的很对，我的缘分分析得非常全面，事业也是非常准的，还不错吧！</p>
+                                <span data-v-1f8af3dd="">购买：事业运程报告 &yen;19.90</span>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div data-v-1f8af3dd="" class="noheight"></div>
+        <!---->
+    </div>
+    <div class="vux-x-dialog dialog-demo">
+        <div class="weui-mask" style="display: none;"></div>
+        <div class="weui-dialog" style="display: none;">
+            <div class="app-err">
+                <p></p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="statics/js/style.js"></script>
+<script>
+    // 解锁报告
+    $('#payBuy').click(function () {
+        payOrder();
+        //location.href = 'Product/'
+    })
+</script>
+</body>
+</html>

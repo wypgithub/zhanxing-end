@@ -1,0 +1,100 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+}
+
+body {
+	position: relative;
+}
+
+.mui-slider-indicator {
+	top: 20px;
+	position: relative;
+}
+
+.mui-slider-indicator .mui-indicator {
+	display: inline-block;
+	width: 40px;
+	height: 2px;
+	margin: 1px 2px;
+	cursor: pointer;
+	border-radius: 2px;
+	background: #aaa;
+}
+
+.mui-slider-indicator .mui-active.mui-indicator {
+	background: #FFD700;
+}
+
+.bottom_area {
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	z-index: 600;
+}
+
+.opLayer {
+	background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+	background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+	background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+	background-image: linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+	z-index: 200;
+	height: 500px;
+	width: 100%;
+	position: absolute;
+}
+
+.shareLayerBtn {
+	position: absolute;
+	top: 142px;
+	width: 100%;
+	z-index: 700;
+}
+
+.shareLayerBtnContent {
+	float: right;
+	height: 36px;
+	width: 86px;
+	background: white;
+	border-radius: 18px 0 0 18px;
+}
+
+.shareLayer {
+	background: rgba(0, 0, 0, 0.8);
+	text-align: center;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 998;
+	opacity: 0.9;
+	display: none;
+}
+
+.shareLayer-icon {
+	width: 52px;
+	height: 67px;
+	display: block;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+}
+
+.shareLaye-txt {
+	top: 90px;
+	right: 80px;
+	position: absolute;
+	color: #fff;
+	font-size: 24px;
+	line-height: 1.5;
+}

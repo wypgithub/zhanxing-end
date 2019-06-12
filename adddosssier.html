@@ -1,0 +1,292 @@
+
+
+
+<html lang="en" xmlns:wb="http://open.weibo.com/wb" data-dpr="1" style="font-size: 37.5px;">
+<head>
+    <title>添加占星报告</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="statics/css/mui.picker.min.css">
+    <link rel="stylesheet" href="statics/css/report/base.css">
+    <link rel="stylesheet" href="statics/css/report/report_add.css">
+</head>
+<body iclicash_checked="true" style="font-size: 12px;">
+    <div id="app">
+        <div data-v-5cd2d555="" class="add-reportlist">
+            <div data-v-5cd2d555="" class="add-reportlist__title app-showtitle css152a2e40fc18039">
+                添加<span class="report_title_after">占星报告</span>
+            </div>
+            <div data-v-5cd2d555="" class="add-reportlist__list">
+                <div data-v-5cd2d555="" class="add-reportlist__list-name">
+                    昵称
+                    <span>
+                        <input type="text" class="mui-input-password" placeholder="请输入昵称" id="name">
+                    </span>
+                </div>
+            </div>
+            <div data-v-5cd2d555="" class="add-reportlist__list">
+                <div data-v-5cd2d555="" class="add-reportlist__list-name">
+                    性别
+                    <span>
+                        <input type="text" class="mui-input-password" placeholder="请选择性别" id="sexlable" readonly="readonly">
+                        <input name="sex" id="sex" readonly="readonly" style="display: none;" value="0"/>
+                    </span>
+                </div>
+            </div>
+            <div data-v-5cd2d555="" class="add-reportlist__list">
+                <div data-v-5cd2d555="" class="add-reportlist__list-name">
+                    时间
+                    <span>
+                        <input type="text" class="mui-input-password" placeholder="请选择出生日期" id="date" readonly="readonly">
+                    </span>
+                </div>
+            </div>
+            <div data-v-5cd2d555="" class="add-reportlist__list">
+                <div data-v-5cd2d555="" class="add-reportlist__list-name">
+                    地点
+                    <span>
+                        <input type="text" class="mui-input-password" placeholder="请选择出生城市" id="citylable" readonly="readonly">
+                        <input name="dist" id="dist" readonly="readonly" style="display: none;" />
+                    </span>
+                </div>
+            </div>
+            <!---->
+            <div data-v-5cd2d555="" class="report-click">
+
+                <div data-v-5cd2d555="" class="report-click-picblack">
+                    <a href="javascript:submitForm();">
+                        <img data-v-5cd2d555="" src="statics/images/svg/icon_font_add_white.svg" alt="" />
+                    </a>
+                </div>
+                <div data-v-5cd2d555="" class="report-click-money">
+                    <p data-v-5cd2d555="">添加</p>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="vux-x-dialog dialog-demo">
+            <div class="weui-mask" style="display: none;"></div>
+            <div class="weui-dialog" style="display: none;">
+                <div class="app-err">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script src="statics/js/style.js"></script>
+    <script src="statics/js/mui.min.js"></script>
+    <script src="statics/js/mui.picker.min.js"></script>
+    <script src="statics/js/citydata.js"></script>
+    <script src="statics/js/jquery-1.11.3.min.js"></script>
+    <script>
+
+        $(function () {
+            var sexPicker = new mui.PopPicker();
+
+            function closePicker() {
+                sexPicker.hide()
+                datePicker.hide()
+                cityPicker.hide()
+            }
+
+            //设置性别选择器
+            sexPicker.setData([{
+                value: '0',
+                text: '男'
+            }, {
+                value: '1',
+                text: '女'
+            }]);
+
+            $("#sexlable").click(function () {
+                closePicker();
+                this.focus();
+                var $this = $(this)
+                sexPicker.show(function (items) {
+                    $this.val(items[0].text)
+                    jQuery("#sex").val(items[0].value)
+                });
+            })
+ 
+
+            var options = {"beginYear":1800,"endYear":2100};
+			var datePicker = new mui.DtPicker(options);
+
+			var datelable = document.getElementById('date');
+            datelable.addEventListener('tap', function () {
+                closePicker();
+				this.focus();//移动焦点，避免从编辑框过来软键盘挡住
+				value = this.value;
+				if (value == null || value == '')
+					value = '1990-06-06 12:00'
+				datePicker.setSelectedValue(value);
+				var id = this.getAttribute('id');
+				datePicker.show(function(rs) {
+					jQuery("#date").val(rs.text);
+				});
+			}, false);
+
+			var cityPicker = new mui.PopPicker({
+				layer: 3
+			});
+			cityPicker.setData(cityData);
+			var showCityPickerButton = document.getElementById('citylable');
+            showCityPickerButton.addEventListener('tap', function (event) {
+                closePicker();
+				this.focus();
+				value = this.value;
+				if (!value || value != ''){
+					values = value.split(' ');
+					if (values.length >= 3)
+						setCityPickerValue(cityPicker, values[0], values[1], values[2]);
+				}
+				cityPicker.show(function(items) {
+					jQuery("#citylable").val((items[0] || {}).text + " " + (items[1] || {}).text + " " + (items[2] || {}).text);
+					jQuery("#dist").val((items[2] || {}).value);
+				});
+			}, false);
+        })
+
+
+		var m_isSettingsLoaded = false;
+		var m_isXpPageLoaded = false;
+
+		var m_curXpClass = 'natal';
+		var m_curXpType = 'natal';
+
+
+		function selectSubPickerItemByText(subPicker, text){
+			length = subPicker.items.length;
+			//alert(length);
+			for(var i=0;i<length;i++){
+				if(subPicker.items[i].text==text){
+					subPicker.setSelectedIndex(i);
+				}
+			}
+		}
+
+		function selectSubPickerItemByValue(subPicker, value){
+			length = subPicker.length;
+			for(var i=0;i<length;i++){
+				if(subPicker.value==value){
+					subPicker.setSelectedIndex(i);
+				}
+			}
+		}
+
+		function setCityPickerValue(picker, province, city, dist){
+			//province, city是text，dist是代码
+			selectSubPickerItemByText(picker.pickers[0], province);
+			picker.pickers[1].setItems(picker.pickers[0].getSelectedItem().children);
+			selectSubPickerItemByText(picker.pickers[1], city);
+			picker.pickers[2].setItems(picker.pickers[1].getSelectedItem().children);
+			selectSubPickerItemByText(picker.pickers[2], dist);
+		}
+
+		var vauleTextClr = '#000';
+
+		function setCtlValue(cid, value){
+			var value = value || '';
+			if(typeof(value) != 'undefined' && value != null && value != ''){
+
+				id = jQuery("#"+cid);
+
+				if (id.is("input:radio")){
+					jQuery("input[name='" + cid +"'][value="+value+"]").prop("checked",true);
+				}
+				else if (id.is("input:checkbox")){
+					id.prop('checked', value == 1);
+				}
+				else
+					id.val(value);
+				return true;
+			}
+			return false;
+		}
+
+
+		function checkCtlValue(cid, cnName, isName){
+			value = jQuery('#' + cid).val();
+			value = jQuery.trim(value);
+			if (value == null || value == ''){
+				alert(cnName + '不能为空。');
+				return false;
+			}
+			//判断名字
+			if (isName){
+				if (value.length > 16){
+					alert(cnName + '过长，应少于16个字符');
+					return false;
+				}
+				/*
+				var regu = "^[a-zA-Z\u4e00-\u9fa5]+$";
+				var re = new RegExp(regu);
+				if (!(value.search(re) != -1)){
+					mui.alert(cnName + '应由中文或英文组成。');
+					return false;
+				}
+				*/
+			}
+			return true;
+		}
+
+		function validateInputs(){
+
+			if (!checkCtlValue('name', '昵称', true))
+					return false;
+
+			if (!checkCtlValue('date', '出生时间'))
+				return false;
+
+
+			if (!checkCtlValue('dist', '出生地'))
+				return false;
+
+			return true;
+		}
+
+     
+
+		function submitForm(){
+           
+			if(!validateInputs())
+				return false;
+
+			var data = {};
+
+			data.class = m_curXpClass;
+			data.type = 'natal';
+			//data.hsys = jQuery('#hsys').val();
+
+			//Name1
+			data.name = jQuery('#name').val();
+			data.sex = jQuery("#sex").val(); //jQuery("input[name='sex']:checked").val();
+
+            fulldate = jQuery('#date').val();
+   
+            //data.dst = jQuery('#isdst').is(':checked') ? 1 : 0;
+
+			data.dist = jQuery('#dist').val();
+            data.city = jQuery('#citylable').val();
+
+            arrdatetime = fulldate.split(' ');
+        	date = arrdatetime[0];
+        	time = arrdatetime[1];
+
+            url = "xp_save.php?name=" + data.name + "&sex=" + data.sex + "&date=" + date + "&time=" + time +
+                "&dist=" + data.dist; //+ "&isdst=" + data.dst; 
+
+            //alert(url);
+
+            document.location = url;
+
+		}
+
+
+    </script>
+</body>
+</html>
