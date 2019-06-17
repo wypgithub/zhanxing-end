@@ -10,8 +10,6 @@
     <link rel="stylesheet" type="text/css" href="statics/css/chart.css" />
     <link rel="stylesheet" type="text/css" href="statics/css/graphy-chart.css" />
     <link href="statics/css/chart-extend.css" id="chart-extend" rel="stylesheet" />
-    <script src="https://cdn.bootcss.com/echarts/3.7.0/echarts.simple.js"></script>
-    <script src="statics/js/echarts-wordcloud.min.js"></script>
 </head>
 <body iclicash_checked="true" style="font-size: 12px;">
 <div id="app">
@@ -551,62 +549,8 @@
                     <div data-v-2d4ac964="" class="result-card__content">
                         太阳在狮子座的人，通常活跃、有创意、富有领导力，时而变得孩子气，遇到挫折时容易消沉、低落，但另一方面也是个掌握权力的人，有天生的领导力与强烈的感染力。这些特质易于成为群体中的领导者。热情和善于展现是这些人的长处，虽然相对自负，但会在群体需要引导的时候挺身而出。
                     </div>
-                    <div data-v-2d4ac964="" id="sun_keywords" class="result-card__content" style="height: 4rem">
-                    </div>
-                    <script>
-                        var chart = echarts.init(document.getElementById('sun_keywords'));
-                        var option = {
-                            backgroundColor: '#F7F7F7',
-                            tooltip: {},
-                            series: [{
-                                type: 'wordCloud',
-                                gridSize: 2,
-                                sizeRange: [12, 50],
-                                rotationRange: [46, 80], //旋转范围
-                                shape: 'roundRect', //'pentagon',
-                                drawOutOfBound: false,
-                                textStyle: {
-                                    normal: {
-                                        color: function () {
-                                            return 'rgb(' + [
-                                                Math.round(Math.random() * 160),
-                                                Math.round(Math.random() * 160),
-                                                Math.round(Math.random() * 160)
-                                            ].join(',') + ')';
-                                        }
-                                    },
-                                    emphasis: {
-                                        shadowBlur: 10,
-                                        shadowColor: '#333'
-                                    }
-                                },
-                                data: [
-                                    /*
-                                    { name:'走路带风霸气攻', value:1},{ name:'在各个领域都是爸爸级别的存在', value:1},{ name:'从容不迫大佬范', value:1},{ name:'像块南孚电池随时电力满满', value:1},{ name:'黑白分明讨厌耍心机', value:1},                                ]
-                                    */
+                    <div data-v-2d4ac964="" id="sun_keywords" class="result-card__content" style="height: 4rem"></div>
 
-                                    {name: "云图", value: 200},
-                                    {name: "是个啥", value: 156},
-                                    {name: "他啥都不是", value: 122},
-                                    {name: "就是他呆子", value: 119},
-                                    {name: "傻子和疯子", value: 108},
-                                    {name: "营养快线", value: 101},
-                                    {name: "哈哈哈到家", value: 96},
-                                    {name: "瑞士军刀", value: 84},
-                                    {name: "DW情侣对表", value: 58},
-                                    {name: "清风抽纸", value: 55},
-                                    {name: "OPPO R9S", value: 46},
-                                    {name: "这一刻更清晰", value: 28},
-                                    {name: "呵呵旧宫style", value: 27},
-                                    {name: "债券评级", value: 26}
-                                ]
-                            }]
-                        };
-
-                        chart.setOption(option);
-
-                        window.onresize = chart.resize;
-                    </script>
                 </div>
             </div>
         </div>
@@ -621,43 +565,6 @@
                         月亮在天蝎座的人，通常内心充满热情，渴望拥有强烈的情绪体验，但另一方面也是个情感为导向的人，通过强烈的情感交流，拥有真诚深刻的亲密关系获得情绪上的滋养。应避免被强大的直觉控制，导致不安全感和信任缺失破坏了亲密关系。
                     </div>
                     <div id="moon_keywords" style="width:100%;height:300px;margin-top: 20px"></div>
-                    <script>
-                        var chart2 = echarts.init(document.getElementById('moon_keywords'));
-                        var option2 = {
-                            tooltip: {},
-                            series: [{
-                                type: 'wordCloud',
-                                gridSize: 2,
-                                sizeRange: [12, 50],
-                                rotationRange: [-90, 90],
-                                shape: 'roundRect',
-                                width: 600,
-                                height: 400,
-                                drawOutOfBound: true,
-                                textStyle: {
-                                    normal: {
-                                        color: function () {
-                                            return 'rgb(' + [
-                                                Math.round(Math.random() * 160),
-                                                Math.round(Math.random() * 160),
-                                                Math.round(Math.random() * 160)
-                                            ].join(',') + ')';
-                                        }
-                                    },
-                                    emphasis: {
-                                        shadowBlur: 10,
-                                        shadowColor: '#333'
-                                    }
-                                },
-                                data: [
-                                    { name:'荷尔蒙爆棚、行走的春药', value:1},{ name:'高冷又温暖，人狠话不多', value:1},{ name:'爱情里的自虐狂席梦思上的永动机', value:1},{ name:'仗义够朋友', value:1},{ name:'热血有冲劲义气敢担当', value:1},                                ]
-                            }]
-                        };
-
-                        chart2.setOption(option2);
-
-                        window.onresize = chart2.resize;
-                    </script>
                 </div>
             </div>
         </div>
@@ -668,38 +575,6 @@
                         行星能量图
                     </div>
                     <div id="power_chart" style="height:300px;width:100%;display:block;margin-top:-40px"></div>
-                    <script>
-
-                        var myChart = echarts.init(document.getElementById('power_chart'));
-                        var app = {};
-                        option = null;
-                        option = {
-                            xAxis: {
-                                type: 'category',
-                                data: ['太阳', '月亮', '水星', '金星', '火星', '木星', '土星']
-                            },
-                            yAxis: {
-                                type: 'value'
-                            },
-
-                            series: [{
-                                data: [6,-3,3,3,3,-2,-2],
-                                type: 'bar',
-                                itemStyle: {
-                                    normal: {
-                                        color: function (params) {
-                                            var colorList = ['#C33531', '#EFE42A', '#64BD3D', '#EE9201', '#29AAE3', '#B74AE5', '#0AAF9F'];
-                                            return colorList[params.dataIndex]
-                                        }
-                                    },
-                                },
-                            }]
-                        };
-                        ;
-                        if (option && typeof option === "object") {
-                            myChart.setOption(option, true);
-                        }
-                    </script>
                     <div data-v-2d4ac964="" class="result-card__title css152a2e40fc18039">
                         最强能量星：太阳
                         <span style="font-family: web_ixingpan;font-size: 28px">M</span>
@@ -750,6 +625,8 @@
                     </div>
                 </div>
                 <div class="tagcloud">
+                    <div class="c_title">关键词解析</div>
+
                     <a class="b01" href="#"> <p>★★★★</p> <p>难以表达</p> <p>自我情绪</p> </a>
                     <a class="b02" href="#"> <p>★★</p> <p>有条</p> <p>不紊</p> </a>
                     <a class="b03" href="#"> <p>★★</p> <p>关注</p> <p>他人</p> </a>
@@ -763,128 +640,153 @@
             </div>
         </div>
         <div data-v-262cfda6="" class="result-features--box" style="margin-top: -40px">
-            <div data-v-262cfda6="" class="love">
-
-            </div>
+            <div data-v-262cfda6="" class="love"></div>
         </div>
     </div>
 </div>
 <script src="statics/js/style.js"></script>
-<script src="statics/js/jquery-1.11.3.min.js"></script>
 <script src="statics/layer/layer.js"></script>
-<script src="statics/js/echarts.min.js"></script>
+<script src="statics/js/echarts-all.js"></script>
+<script src="statics/js/jquery-1.11.3.min.js"></script>
 <script>
-    var myChart = echarts.init(document.getElementById('chart_div'));
-    var option = {
-        title: {
-            text: '星盘元素格局图',
-            left: 'center'
-        },
-        series : [
-            {
-                type: 'pie',
-                startAngle:135,
-                radius : '65%',
-                label:{
-                    position: 'inner',
-                    fontSize:15
-                },
-                labelLine:{
-                    normal:{
-                        show:true
-                    },
-                    length:50,
-                    length2:20,
-                    ineStyle:{
-                        color:'#43628e'
-                    }
-                },
-                center: ['50%', '50%'],
-                selectedMode: 'single',
-                itemStyle : {
-                    normal : {
-                        label : {
-                            position : 'inner',
-                            formatter : function (params){
-                                return (params.percent - 0) + '%';
-                            },
-                            textStyle: {
-                                color: '#ffffff'
-                            }
-                        },
-                        labelLine : {
-                            show : false
-                        }
-                    }
-                },
-                data:[
-                    {value:25,name: '幽州',
-                        itemStyle: {
-                            color:'#43628e'
-                        }
-                    },
-                    {value:25,name: '荆州',
-                        itemStyle: {
-                            color:'#5592a4'
-                        }
-                    },
-                    {value:15,name: '兖州',
-                        itemStyle: {
-                            color:'#60c6bb'
-                        }
-                    },
-                    {value:35,name: '西凉',
-                        itemStyle: {
-                            color:'#3a5a9a'
-                        }
-                    }
-                ]
-            },
-            {
-                type: 'pie',
-                center: ['50%', '50%'],
-                startAngle:135,
-                radius : '65%',
-                label:{
-                    position: 'outside'
-                },
-                labelLine:{
-                    normal:{
-                        show:true
-                    },
-                    length:50,
-                    length2:20,
-                    ineStyle:{
-                        color:'#43628e'
-                    }
-                },
-                selectedMode: 'single',
-                data:[
-                    {value:25,name: '水元素',
-                        itemStyle: {
-                            color:'#43628e'
-                        }
-                    },
-                    {value:25,name: '土元素',
-                        itemStyle: {
-                            color:'#5592a4'
-                        }
-                    },
-                    {value:15,name: '火元素',
-                        itemStyle: {
-                            color:'#60c6bb'
-                        }
-                    },
-                    {value:35,name: '风元素',
-                        itemStyle: {
-                            color:'#3a5a9a'
-                        }
-                    }
-                ]
+    function createRandomItemStyle() {
+        return {
+            normal: {
+                color: Math.random() > 0.5? '#5ab2b4' : '#3d4b9b'
             }
-        ]
-    };
-    myChart.setOption(option);
+        };
+    }
+
+    function createWordCloudOption() {
+        const wordOption = {
+            tooltip: {
+                show: false
+            },
+            series: [{
+                type: 'wordCloud',
+                size: ['80%', '80%'],
+                textRotation : [0, 90],
+                textPadding: 0,
+                autoSize: {
+                    enable: true,
+                    minSize: 14
+                },
+                data: [
+                    {
+                        name: "斗志满满",
+                        value: 10000,
+                        itemStyle: createRandomItemStyle()
+                    },
+                    {
+                        name: "谨慎",
+                        value: 6181,
+                        itemStyle: createRandomItemStyle()
+                    },
+                    {
+                        name: "无敌少女",
+                        value: 4386,
+                        itemStyle: createRandomItemStyle()
+                    },
+                    {
+                        name: "好奇宝宝",
+                        value: 4055,
+                        itemStyle: createRandomItemStyle()
+                    },
+                    {
+                        name: "难受一批",
+                        value: 2467,
+                        itemStyle: createRandomItemStyle()
+                    },
+                    {
+                        name: "日常犯病",
+                        value: 2244,
+                        itemStyle: createRandomItemStyle()
+                    },
+                    {
+                        name: "晚上好奇宝宝",
+                        value: 1898,
+                        itemStyle: createRandomItemStyle()
+                    },
+                    {
+                        name: "啊啊啊难受一批",
+                        value: 1484,
+                        itemStyle: createRandomItemStyle()
+                    },
+                    {
+                        name: "具有多种人",
+                        value: 1112,
+                        itemStyle: createRandomItemStyle()
+                    },
+                    {
+                        name: "呕恶心~！",
+                        value: 965,
+                        itemStyle: createRandomItemStyle()
+                    },
+                    {
+                        name: "啊我说了",
+                        value: 847,
+                        itemStyle: createRandomItemStyle()
+                    },
+                    {
+                        name: "发郭德纲合伙人",
+                        value: 582,
+                        itemStyle: createRandomItemStyle()
+                    },
+                    {
+                        name: "丧心病狂",
+                        value: 555,
+                        itemStyle: createRandomItemStyle()
+                    },
+                    {
+                        name: "咦咦",
+                        value: 550,
+                        itemStyle: createRandomItemStyle()
+                    },
+                    {
+                        name: "好奇宝宝",
+                        value: 462,
+                        itemStyle: createRandomItemStyle()
+                    },
+                    {
+                        name: "具有多种人格每天大",
+                        value: 366,
+                        itemStyle: createRandomItemStyle()
+                    },
+                    {
+                        name: "呕恶",
+                        value: 360,
+                        itemStyle: createRandomItemStyle()
+                    },
+                    {
+                        name: "日常",
+                        value: 282,
+                        itemStyle: createRandomItemStyle()
+                    },
+                    {
+                        name: "讨厌鬼",
+                        value: 273,
+                        itemStyle: createRandomItemStyle()
+                    },
+                    {
+                        name: "呕恶心",
+                        value: 265,
+                        itemStyle: createRandomItemStyle()
+                    }
+                ]
+            }]
+        };
+        return wordOption
+    }
+
+    var wordCloudChart1 = echarts.init(document.getElementById('sun_keywords'));
+    wordCloudChart1.setOption(createWordCloudOption());
+    window.onresize = wordCloudChart1.resize;
+
+    var wordCloudChart2 = echarts.init(document.getElementById('moon_keywords'));
+    wordCloudChart2.setOption(createWordCloudOption());
+    window.onresize = wordCloudChart2.resize;
+
+
     $('.result-detail__submit').click(function () {
         location.href = 'order.php?xpid=37&productid=' + $(this).attr("productid");
     })
@@ -960,6 +862,137 @@
         //location.href = 'Product/'
     })
 
+
+</script>
+
+
+<script src="statics/js/echarts.min-4.2.js"></script>
+<script>
+
+    var barChart = echarts.init(document.getElementById('power_chart'));
+    barChart.setOption({
+        xAxis: {
+            type: 'category',
+            data: ['太阳', '月亮', '水星', '金星', '火星', '木星', '土星']
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [{
+            data: [1,-3,8,11,8,7,8],
+            type: 'bar',
+            itemStyle: {
+                normal: {
+                    color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
+                        offset: 0,
+                        color: "#52afb6" // 0% 处的颜色
+                    },{
+                        offset: 1,
+                        color: "#385a99" // 100% 处的颜色
+                    }], false)
+                }
+            },
+        }]
+    });
+
+    var myChart = echarts.init(document.getElementById('chart_div'));
+    var option = {
+        title: {
+            text: '星盘元素格局图',
+            left: 'center'
+        },
+        series : [
+            {
+                type: 'pie',
+                startAngle:135,
+                radius : '65%',
+                labelLine:{
+                    normal:{
+                        show:true
+                    },
+                    length:50,
+                    length2:20,
+                    ineStyle:{
+                        color:'#43628e'
+                    }
+                },
+                center: ['50%', '55%'],
+                selectedMode: 'single',
+                itemStyle : {
+                    normal : {
+                        label : {
+                            position : 'inner',
+                            formatter : function (params){
+                                return (params.percent - 0) + '%';
+                            },
+                            textStyle: {
+                                color: '#ffffff'
+                            },
+                            lineHeight: 25,
+                            backgroundColor:{
+                                image: 'statics/images/pie_bac_2.png'
+                            }
+                        },
+                        labelLine : {
+                            show : false
+                        }
+                    }
+                },
+                data:[
+                    {value:25},
+                    {value:25},
+                    {value:15},
+                    {value:35}
+                ]
+            },
+            {
+                type: 'pie',
+                center: ['50%', '55%'],
+                startAngle:135,
+                radius : '65%',
+                label:{
+                    position: 'outside',
+                    lineHeight: 25,
+                    backgroundColor:{
+                        image: 'statics/images/pie_bac_1.png'
+                    }
+                },
+                labelLine:{
+                    normal:{
+                        show:true
+                    },
+                    length:60,
+                    length2:30,
+                    ineStyle:{
+                        color:'#43628e'
+                    }
+                },
+                data:[
+                    {value:25,name: '水元素',
+                        itemStyle: {
+                            color:'#43628e'
+                        }
+                    },
+                    {value:25,name: '土元素',
+                        itemStyle: {
+                            color:'#5592a4'
+                        }
+                    },
+                    {value:15,name: '火元素',
+                        itemStyle: {
+                            color:'#60c6bb'
+                        }
+                    },
+                    {value:35,name: '风元素',
+                        itemStyle: {
+                            color:'#3a5a9a'
+                        }
+                    }
+                ]
+            }
+        ]
+    };
+    myChart.setOption(option);
 
 </script>
 </body>

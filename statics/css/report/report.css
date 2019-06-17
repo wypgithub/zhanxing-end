@@ -112,12 +112,7 @@
     vertical-align: middle;
     height: 1.86666667rem;
     width: 8.26666667rem;
-
     background: linear-gradient(#e6bc68,#d3a456,#cb9c41,#edd08a,#fde9a2);
-
-    /*
-    background: -webkit-gradient(linear, left top, left bottom, from(#fe9f6a), color-stop(79%, #f98647), to(#fca06d));
-    background: linear-gradient(180deg, #fe9f6a 0%, #f98647 79%, #fca06d 100%);*/
     -webkit-box-shadow: 0px 2px 4px 0px rgba(132, 47, 0, 0.52);
     box-shadow: 0px 2px 4px 0px rgba(132, 47, 0, 0.52);
     border-radius: 0.05333333rem;
@@ -135,7 +130,7 @@
 .result-share p[data-v-262cfda6] {
     display: inline-block;
     line-height: 1.9rem;
-    font-size: 16px;
+    font-size: 0.5rem;
     font-family: webfont;
     font-weight: 400;
     letter-spacing: 0.08rem;
@@ -564,6 +559,12 @@
     position: relative;
     height: 6rem;
 }
+.tagcloud .c_title{
+    margin: 0.5rem auto;
+    text-align: center;
+    font-size: 0.4rem;
+    color: #4a4a4a;
+}
 .tagcloud a {
     position: absolute;
     border-radius: 50%;
@@ -573,7 +574,7 @@
     text-align: center;
     letter-spacing: 0.05rem;
 }
-.b01{
+.tagcloud .b01{
     left: 3.1rem;
     top: 2rem;
     width: 2rem;
@@ -581,7 +582,7 @@
     line-height: 0.6rem;
     background-color: #3b5a9a;
 }
-.b02{
+.tagcloud .b02{
     left: 5.3rem;
     top: 1.5rem;
     width: 1rem;
@@ -590,7 +591,7 @@
     line-height: 0.3rem;
     background: #487ca3;
 }
-.b03{
+.tagcloud .b03{
     left: 1.8rem;
     top: 1.5rem;
     width: 1rem;
@@ -599,57 +600,57 @@
     line-height: 0.3rem;
     background: #60c6bb;
 }
-.b04{
+.tagcloud .b04{
     left: 1rem;
     top: 3rem;
-    width: 0.9rem;
-    height: 0.9rem;
+    width: 0.75rem;
+    height: 0.75rem;
     line-height: 0.3rem;
-    font-size: 0.2rem;
+    font-size: 0.25rem;
     background: #487ca3;
 }
-.b05{
+.tagcloud .b05{
     left: 6rem;
     top: 3rem;
-    width: 0.9rem;
-    height: 0.9rem;
+    width: 0.75rem;
+    height: 0.75rem;
     line-height: 0.3rem;
-    font-size: 0.2rem;
+    font-size: 0.25rem;
     background: #60c6bb;
 }
-.b06{
+.tagcloud .b06{
     left: 5rem;
     top: 4rem;
-    width: 0.8rem;
-    height: 0.8rem;
+    width: 0.75rem;
+    height: 0.75rem;
     line-height: 0.3rem;
-    font-size: 0.2rem;
+    font-size: 0.25rem;
     background: #60c6bb;
 }
-.b07{
+.tagcloud .b07{
     left: 0.5rem;
     top: 1rem;
-    width: 0.7rem;
-    height: 0.7rem;
+    width: 0.65rem;
+    height: 0.65rem;
     line-height: 0.3rem;
-    font-size: 0.15rem;
+    font-size: 0.25rem;
     background: #82b2d8;
 }
-.b08{
+.tagcloud .b08{
     left: 7rem;
     top: 2rem;
-    width: 0.7rem;
-    height: 0.7rem;
+    width: 0.65rem;
+    height: 0.65rem;
     line-height: 0.3rem;
-    font-size: 0.15rem;
+    font-size: 0.25rem;
     background: #82b2d8;
 }
-.b09{
+.tagcloud .b09{
     left: 2.4rem;
     top: 3.8rem;
-    width: 0.7rem;
-    height: 0.7rem;
+    width: 0.65rem;
+    height: 0.65rem;
     line-height: 0.3rem;
-    font-size: 0.15rem;
+    font-size: 0.25rem;
     background: #82b2d8;
 }
