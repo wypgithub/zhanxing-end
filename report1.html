@@ -640,8 +640,36 @@
             </div>
         </div>
         <div data-v-262cfda6="" class="result-features--box">
-            <div data-v-262cfda6="" class="cause"></div>
-            <div data-v-262cfda6="" class="love"></div>
+            <div data-v-262cfda6="" class="cause">
+                <div data-v-51317424="" data-v-262cfda6="" class="result-detail">
+                    <div data-v-51317424="" class="result-detail__title">
+                        情感运势报告
+                    </div>
+                    <div data-v-51317424="" class="result-detail__text">
+                        你的另一半性格？是早婚还是晚婚？应该选择哪一类工作？
+                    </div>
+                    <div data-v-51317424="" class="lock">
+                    </div>
+                    <div data-v-51317424="" class="result-detail__submit caree lock_cause">
+                        解锁报告
+                    </div>
+                </div>
+            </div>
+            <div data-v-262cfda6="" class="love">
+                <div data-v-51317424="" data-v-262cfda6="" class="result-detail">
+                    <div data-v-51317424="" class="result-detail__title">
+                        占星职业天赋报告
+                    </div>
+                    <div data-v-51317424="" class="result-detail__text">
+                        占星上看职业天赋如何？是否适合创业？应该选择哪一类工作？
+                    </div>
+                    <div data-v-51317424="" class="lock">
+                    </div>
+                    <div data-v-51317424="" class="result-detail__submit caree lock_love">
+                        解锁报告
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -1144,7 +1172,7 @@
                 } ]
             })
         }
-        maskImage.src = './statics/images/ttt.jpg';
+        //maskImage.src = './statics/images/ttt.jpg';
     }
 
     var wordCloudChart1 = echarts.init(document.getElementById('sun_keywords'));
@@ -1239,6 +1267,14 @@
         },
         yAxis: {
             type: 'value'
+        },
+        toolbox: {
+            feature: {
+                title:'导出',
+                saveAsImage: {
+                    pixelRatio:4
+                }
+            }
         },
         series: [{
             data: [1,-3,8,11,8,7,8],
@@ -1356,6 +1392,20 @@
     };
     myChart.setOption(option);
 
+
+
+    $(".lock_cause").click(function () {
+        const $lock = $(this).siblings(".lock");
+
+        if($lock.hasClass("in_lock")){
+            $lock.removeClass("in_lock")
+            $lock.addClass("un_lock")
+        }else {
+            $lock.removeClass("un_lock")
+            $lock.addClass("in_lock")
+        }
+
+    })
 </script>
 </body>
 </html>

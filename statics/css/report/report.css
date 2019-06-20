@@ -140,7 +140,8 @@
     padding-left: 0.53333333rem;
 }
 .love[data-v-262cfda6] {
-    background: url('../../images/love.png') no-repeat;
+    /*background: url('../../images/love.png') no-repeat;*/
+    background: url('../../images/love-lock.png') no-repeat;
     background-size: 100% 98%;
     width: 8.26666667rem;
     height: 4.1rem;
@@ -149,7 +150,8 @@
     margin: 0.4rem auto;
 }
 .cause[data-v-262cfda6] {
-    background: url('../../images/cause.png') no-repeat;
+    /*background: url('../../images/cause.png') no-repeat;*/
+    background: url('../../images/cause-lock.png') no-repeat;
     background-size: 100% 98%;
     width: 8.26666667rem;
     height: 4.1rem;
@@ -434,6 +436,7 @@
     width: 8.26666667rem;
     margin: 0 auto;
     border-radius: 0.08rem;
+    position: relative;
 }
 .result-detail__title[data-v-51317424] {
     width: 7.33333333rem;
@@ -445,6 +448,18 @@
     padding-top: 0.66666667rem;
     padding-bottom: 0.29333333rem;
     text-align: left;
+}
+.lock{
+  background: url('../../images/lock.png') no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  width: 1.2rem;
+  height: 1.3rem;
+  right:0.7rem;
+  top: 0.9rem;
+}
+.un_lock{
+    background: url('../../images/unlock.png') no-repeat;
 }
 .result-detail__text[data-v-51317424] {
     width: 5.09333333rem;
