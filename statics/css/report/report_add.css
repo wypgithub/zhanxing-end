@@ -92,3 +92,10 @@ input{
 .report_title_after{
     color: #395a99;
 }
+.mui-dtpicker-title{
+    width: 100%;
+}
+.mui-dtpicker-title h5{
+    width: 19.5%;
+    padding: 8px 0;
+}

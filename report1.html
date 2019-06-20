@@ -650,7 +650,7 @@
                     </div>
                     <div data-v-51317424="" class="lock">
                     </div>
-                    <div data-v-51317424="" class="result-detail__submit caree lock_cause">
+                    <div data-v-51317424="" class="result-detail__submit caree">
                         解锁报告
                     </div>
                 </div>
@@ -665,7 +665,7 @@
                     </div>
                     <div data-v-51317424="" class="lock">
                     </div>
-                    <div data-v-51317424="" class="result-detail__submit caree lock_love">
+                    <div data-v-51317424="" class="result-detail__submit love">
                         解锁报告
                     </div>
                 </div>
@@ -1185,7 +1185,11 @@
 
 
     $('.result-detail__submit').click(function () {
-        location.href = 'order.php?xpid=37&productid=' + $(this).attr("productid");
+        const $lock = $(this).siblings(".lock");
+
+        $lock.addClass("un_lock")
+
+        //location.href = 'order.php?xpid=37&productid=' + $(this).attr("productid");
     })
 
 
@@ -1391,21 +1395,6 @@
         ]
     };
     myChart.setOption(option);
-
-
-
-    $(".lock_cause").click(function () {
-        const $lock = $(this).siblings(".lock");
-
-        if($lock.hasClass("in_lock")){
-            $lock.removeClass("in_lock")
-            $lock.addClass("un_lock")
-        }else {
-            $lock.removeClass("un_lock")
-            $lock.addClass("in_lock")
-        }
-
-    })
 </script>
 </body>
 </html>
