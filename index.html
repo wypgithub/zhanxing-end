@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="./statics/css/mui.min.css">
+		<link rel="stylesheet" href="./statics/css/exam.css">
+	</head>
+	<body>
+		<div id="slider" class="mui-slider">
+			<div class="mui-slider-group mui-slider-loop">
+				<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#">
+						<img src="./statics/images/slider_3.png">
+					</a>
+				</div>
+				<!-- 第一张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="./statics/images/slider_1.png">
+					</a>
+				</div>
+				<!-- 第二张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="./statics/images/slider_2.png">
+					</a>
+				</div>
+				<!-- 第三张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="./statics/images/slider_3.png">
+					</a>
+				</div>
+				<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#">
+						<img src="./statics/images/slider_1.png">
+					</a>
+				</div>
+			</div>
+
+			<div class="mui-slider-indicator" style="display: none;">
+				<div class="mui-indicator mui-active"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+			</div>
+
+		</div>
+		<div class="bottom_area" style="top: 300px;">
+			<div class="opLayer"></div>
+		</div>
+		<div class="shareLayerBtn">
+			<div class="shareLayerBtnContent">
+				<img src="./statics/images/share.png" style="height: 28px; margin: 4px;"/>
+				<span style="font-size: 16px;float: right;padding-right: 12px;margin-top: 9px;">分享</span>
+			</div>
+		</div>
+
+		<div class="shareLayer">
+			<img src="statics/images/share_arrow.png" class="shareLayer-icon" />
+			<span class="shareLaye-txt">点击这里分享好友<br/>或者朋友圈</span>
+		</div>
+
+		<div class="bottom_area">
+
+			<div class="mui-slider-indicator">
+				<div class="mui-indicator mui-indicator-show mui-active" id="mui-indicator_1"></div>
+				<div class="mui-indicator mui-indicator-show" id="mui-indicator_2"></div>
+				<div class="mui-indicator mui-indicator-show" id="mui-indicator_3"></div>
+			</div>
+			<div style="margin-top: 30px;width: 100%; margin-bottom: 0px;">
+				<table width="100%">
+					<tr>
+						<td width="50%" style="padding: 10px;padding-right: 2px;" id="report_main">
+							<div class="item-report">
+								<div style="color: white;font-size: 12px;width: 100%;margin-bottom: 5px;">占星</div>
+								<div style="color: white;font-size: 15px;width: 100%;">报告</div>
+								<div style="float: right;margin-bottom: 5px;"><img src="statics/images/doc.png" height="30px"></div>
+							</div>
+						</td>
+						<td style="padding: 10px;padding-left: 2px;" id="watch_main">
+							<div class="item-person">
+								<div style="color: white;font-size: 12px;width: 100%;margin-bottom: 5px;">人工</div>
+								<div style="color: white;font-size: 15px;width: 100%;">看盘</div>
+								<div style="float: right;margin-bottom: 5px;"><img src="statics/images/people.png" height="30px"></div>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div style="background: white; margin-top: 10px;padding-top: 5px; ">
+				<div style="height: 120px;text-align: center;">
+					<div class="append-report-pic">
+						<img src="./statics/images/svg/icon_font_add.svg"/>
+					</div>
+					<div style="width: 100%; ">
+						<p>添加测试报告</p>
+					</div>
+				</div>
+				<div style="width: 100%; ">
+					<table style="width: 100%; ">
+						<tr>
+							<td align="left" width="50%" style="padding-left: 10px;">
+								<img src="./statics/images/list.png" width="25px" id="left_bottom-item"/>
+							</td>
+							<td align="right" style="padding-right: 10px;">
+								<img src="./statics/images/all.png" width="25px"/>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<script src="./statics/js/mui.min.js"></script>
+		<script src="./statics/js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript " charset="utf-8 ">
+			mui.init({
+				swipeBack:true //启用右滑关闭功能
+			});
+			var slider = mui("#slider ");
+			slider.slider({
+				interval: 5000
+			});
+
+			document.querySelector('.mui-slider').addEventListener('slide', function(event) {
+				//alert(event.detail.slideNumber);
+				$('.mui-indicator-show').removeClass("mui-active");
+				id = event.detail.slideNumber + 1;
+				id = '#mui-indicator_' + id;
+				//alert(id);
+				$(id).addClass("mui-active");
+
+			});
+
+			$('.shareLayerBtn').click(function(event){
+				$('.shareLayer').css('display', 'block');
+			})
+
+			$('.shareLayer').click(function(event){
+				$('.shareLayer').css('display', 'none');
+			})
+
+            $('#report_main').click(function(event){
+                location.href = 'report/index.html'
+            })
+            $('#left_bottom-item').click(function(event){
+                location.href = 'report/setting.html'
+            })
+            // 跳转添加面向报告页面
+            $('.append-report-pic').click(function () {
+                location.href = 'report/report_add.html'
+            })
+            $('#watch_main').click(function () {
+                location.href = 'watch/first.html'
+            })
+		</script>
+	</body>
+</html>

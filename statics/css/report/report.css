@@ -51,24 +51,6 @@
     position: absolute;
     transform: rotate(79deg);
 }
-.face-result__title-img--content[data-v-262cfda6] {
-    position: absolute;
-    top:0.2rem;
-    left: 0.2rem;
-    width: 5.6rem;
-    height: 5.6rem;
-    border: 0.05rem solid #589fa8;
-    overflow: hidden;
-    background: #fff;
-    border-radius: 100%;
-    animation: showout-data-v-262cfda6 2s;
-    -moz-animation: showout-data-v-262cfda6 2s;
-    /* Firefox */
-    -webkit-animation: showout-data-v-262cfda6 2s;
-    /* Safari 和 Chrome */
-    -o-animation: showout-data-v-262cfda6 2s;
-    /* Opera */
-}
 .face-result__title-img--content img[data-v-262cfda6] {
     width: 100%;
 }
