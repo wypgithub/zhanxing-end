@@ -177,7 +177,7 @@
     font-size: 0.37333333rem;
     font-weight: 200;
     color: #4a4a4a;
-    line-height: 0.53333333rem;
+    line-height: 0.7rem;
     text-align: left;
 }
 .result-garde[data-v-7175b888] {
@@ -436,8 +436,8 @@
     padding-bottom: 0.29333333rem;
     text-align: left;
 }
-.lock{
-  background: url('../../images/lock.png') no-repeat;
+.cause .lock{
+  background: url('../../images/lock_1.png') no-repeat;
   background-size: 100% 100%;
   position: absolute;
   width: 1rem;
@@ -445,8 +445,21 @@
   right:0.7rem;
   top: 0.9rem;
 }
-.un_lock{
-    background: url('../../images/unlock.png') no-repeat;
+.love .lock{
+    background: url('../../images/lock_2.png') no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    width: 1rem;
+    height: 1.1rem;
+    right:0.7rem;
+    top: 0.9rem;
+}
+.cause .un_lock{
+    background: url('../../images/unlock_1.png') no-repeat;
+    background-size: 100% 100%;
+}
+.love .un_lock{
+    background: url('../../images/unlock_2.png') no-repeat;
     background-size: 100% 100%;
 }
 .result-detail__text[data-v-51317424] {
@@ -498,10 +511,13 @@
 .result-imgcard__top[data-v-1293da50] {
     text-align: center;
     font-size: 0.4rem;
+    font-weight: 400;
     color: #4a4a4a;
 }
 .text-align-left[data-v-1293da50]{
+    margin-top: 1rem;
     text-align: left;
+    font-weight: 400;
     font-size: 0.4rem;
     color: #4a4a4a;
 }
@@ -568,10 +584,9 @@
     letter-spacing: 0.05rem;
     font-family: "webfont" !important;
 }
-.content_div {
-    border-bottom: 1px dashed darkgray;
-}
 .tagcloud {
+    border-top: 1px dashed darkgray;
+    margin-top: 1rem;
     position: relative;
     height: 6rem;
 }
